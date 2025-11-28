@@ -1,0 +1,34 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}About Us - Nepal Disaster Resilience Foundation{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app/css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="about-section">
+    <div class="about-text">
+        <p class="intro-text">
+            Nepal is among the most disaster-prone countries in the world due to its fragile geology, rugged
+            topography, unplanned urbanization, and the escalating impacts of climate change. The country
+            faces recurrent hazards such as earthquakes, floods, landslides, fires, droughts, epidemics, and
+            climate-induced extreme events. These disasters have continuously resulted in loss of lives, damage
+            to property and livelihoods, and long-term disruption to socio-economic development.
+            <br/>
+            Despite progress in disaster risk reduction and management, challenges remain in preparedness,
+            coordination, rapid response, sustainable recovery, and strengthening resilience at community and
+            institutional levels. There is a pressing need for an institution dedicated to building disaster
+            preparedness, prevention, mitigation, response, recovery, and long-term resilience.
+            <br/>
+            In this context, the Nepal Disaster Resilience Foundation (NDRF) is envisioned as a non-profit, nonpolitical organization committed to strengthening disaster risk management and resilience across
+            Nepal through capacity building, knowledge sharing, advocacy, coordination, and community
+            empowerment.
+        </p>
+    </div>
+    <div class="about-image">
+        {% comment %} <img src="{% static 'app/images/your-image.jpg' %}" alt="About NDRF"> {% endcomment %}
+    </div>
+</section>
+{% endblock %}

@@ -21,13 +21,21 @@
 
         <ul class="nav-links">
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="{%url 'about'%}">About Us</a></li>
             <li><a href="#">What we do</a></li>
             <li class="dropdown">
                 <a href="javascript:void(0);" onclick="toggleDropdown(event)">How to help us ▾</a>
                 <ul class="dropdown-menu">
                     <li><a href="#">Join Us</a></li>
                     <li><a href="#">Donate</a></li>
+                </ul>
+            </li>
+
+             <li class="dropdown">
+                <a href="javascript:void(0);" onclick="toggleDropdown(event)">our events ▾</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Upcoming Events</a></li>
+                    <li><a href="{% url 'meeting'%}">Ndrf First Meeting</a></li>
                 </ul>
             </li>
             <li><a href="#">Contact</a></li>

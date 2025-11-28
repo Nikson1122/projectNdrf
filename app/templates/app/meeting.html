@@ -1,0 +1,47 @@
+{% extends "app/base.html" %}
+{% load static %}
+
+{% block title %}About Us | Nepal Disaster Resilience Foundation{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app/css/meeting.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<!-- SLIDER -->
+
+<section class="about-intro">
+    <div class="intro-container">
+        <h1>NDRF First meeting</h1>
+        <p>
+            On Mangsir 9, 2082, the Nepal Disaster Resilience Foundation (NDRF) conducted its first official meeting, initiating the foundation’s journey toward strengthening disaster resilience in Nepal. 
+            Below are some images highlighting our key moments and activities.
+        </p>
+    </div>
+</section>
+
+
+<section class="about-hero">
+    <div class="slider-container">
+        <div class="slide fade active">
+            <img src="{% static 'app/images/meting4.jpg' %}" alt="">
+        </div>
+        <div class="slide fade">
+            <img src="{% static 'app/images/meting2.jpg' %}" alt="">
+        </div>
+        <div class="slide fade">
+            <img src="{% static 'app/images/meting3.jpg' %}" alt="">
+        </div>
+        <div class="slide fade">
+            <img src="{% static 'app/images/meting1.jpg' %}" alt="">
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{% static 'app/js/meeting.js' %}"></script>
+{% endblock %}
