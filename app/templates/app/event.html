@@ -1,0 +1,33 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Add Event - Nepal Disaster Resilience Foundation{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app/css/event.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="event-container">
+
+    <h2>Add New Event</h2>
+
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <label>Event Title</label>
+        <input type="text" name="title" required>
+
+        <label>Event Description</label>
+        <textarea name="description" rows="6" required></textarea>
+
+        <label>Upload PDF File (Optional)</label>
+        <input type="file" name="pdf" accept=".pdf">
+
+        <button type="submit" class="event-btn">Submit Event</button>
+    </form>
+
+</div>
+
+{% endblock %}

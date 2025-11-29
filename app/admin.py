@@ -29,3 +29,13 @@ class CustomUserAdmin(UserAdmin):
     ordering = ('username',)
 
 admin.site.register(CustomUser, CustomUserAdmin)
+
+
+
+from django.contrib import admin
+from .models import Event
+
+@admin.register(Event)
+class EventAdmin(admin.ModelAdmin):
+    list_display = ('title', 'pdf')
+    search_fields = ('title',)

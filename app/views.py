@@ -3,6 +3,8 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 
+from .models import Event
+
 
 # Create your views here.
 
@@ -32,3 +34,24 @@ def login_user(request):
                 return render(request, 'app/login.html', {'error': 'Invalid username or password'})
          
     return render(request, 'app/login.html')
+
+@login_required
+def create_event(request):
+    if request.method == "POST":
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        pdf = request.FILES.get('pdf')
+
+        Event.objects.create(
+            title=title,
+            description=description,
+            pdf=pdf
+        )
+
+        return redirect('events')  # your event list page
+
+    return render(request, 'app/event.html')
+
+def event_list(request):
+    events = Event.objects.order_by('title')  
+    return render(request, 'app/upcomingevent.html', {'events': events})
