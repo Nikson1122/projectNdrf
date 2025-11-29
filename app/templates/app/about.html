@@ -4,31 +4,220 @@
 {% block title %}About Us - Nepal Disaster Resilience Foundation{% endblock %}
 
 {% block extra_css %}
-<link rel="stylesheet" href="{% static 'app/css/about.css' %}">
+<link rel="stylesheet" href="{% static 'app/css/aboutt.css' %}">
 {% endblock %}
 
 {% block content %}
-<section class="about-section">
-    <div class="about-text">
-        <p class="intro-text">
-            Nepal is among the most disaster-prone countries in the world due to its fragile geology, rugged
-            topography, unplanned urbanization, and the escalating impacts of climate change. The country
-            faces recurrent hazards such as earthquakes, floods, landslides, fires, droughts, epidemics, and
-            climate-induced extreme events. These disasters have continuously resulted in loss of lives, damage
-            to property and livelihoods, and long-term disruption to socio-economic development.
-            <br/>
-            Despite progress in disaster risk reduction and management, challenges remain in preparedness,
-            coordination, rapid response, sustainable recovery, and strengthening resilience at community and
-            institutional levels. There is a pressing need for an institution dedicated to building disaster
-            preparedness, prevention, mitigation, response, recovery, and long-term resilience.
-            <br/>
-            In this context, the Nepal Disaster Resilience Foundation (NDRF) is envisioned as a non-profit, nonpolitical organization committed to strengthening disaster risk management and resilience across
-            Nepal through capacity building, knowledge sharing, advocacy, coordination, and community
-            empowerment.
-        </p>
-    </div>
-    <div class="about-image">
-        {% comment %} <img src="{% static 'app/images/your-image.jpg' %}" alt="About NDRF"> {% endcomment %}
+<h2 class="section-title">About Us</h2>
+<!-- ABOUT -->
+<section class="about-wrap">
+    <div class="about-inner">
+        <div class="about-text">
+            <p class="intro-text">
+                Nepal is among the most disaster-prone countries in the world due to its fragile geology, rugged
+                topography, unplanned urbanization, and the escalating impacts of climate change. The country
+                faces recurrent hazards such as earthquakes, floods, landslides, fires, droughts, epidemics, and
+                climate-induced extreme events. These disasters have continuously resulted in loss of lives, damage
+                to property and livelihoods, and long-term disruption to socio-economic development.
+                <br><br>
+                Despite progress in disaster risk reduction and management, challenges remain in preparedness,
+                coordination, rapid response, sustainable recovery, and strengthening resilience at community and
+                institutional levels. There is a pressing need for an institution dedicated to building disaster
+                preparedness, prevention, mitigation, response, recovery, and long-term resilience.
+                <br><br>
+                In this context, the Nepal Disaster Resilience Foundation (NDRF) is envisioned as a non-profit, nonpolitical organization committed to strengthening disaster risk management and resilience across
+                Nepal through capacity building, knowledge sharing, advocacy, coordination, and community
+                empowerment.
+            </p>
+        </div>
     </div>
 </section>
+
+<!-- ADVISORS -->
+<h2 class="section-title">Our Advisors</h2>
+
+<section class="people-grid advisors-grid" aria-label="Advisors">
+    <!-- Advisor 1 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/sanat.jpg' %}" alt="IGP Sanat Kumar Basnet">
+        </div>
+        <div class="person-body">
+            <p>
+                1. IGP Sanat Kumar Basnet (Rtd.)
+            </p>
+        </div>
+    </article>
+
+    <!-- Advisor 2 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/sailendra.jpg' %}" alt="IGP Sailendra Kumar Shrestha">
+        </div>
+        <div class="person-body">
+            <p>
+                2. IGP Sailendra Kumar Shrestha (Rtd.)
+            </p>
+        </div>
+    </article>
+
+    <!-- Advisor 3 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/rajesh.jpg' %}" alt="Rajesh Shrestha">
+        </div>
+        <div class="person-body">
+            <p>
+                3. Rajesh Shrestha, Chairman, Kalanga Hydropower
+            </p>
+        </div>
+    </article>
+
+    <!-- Advisor 4 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/arjun.jpg' %}" alt="Arjun Bhattarai">
+        </div>
+        <div class="person-body">
+            <p>
+                4. Arjun Bhattarai, President, NGO Federation Nepal
+            </p>
+        </div>
+    </article>
+
+    <!-- Advisor 5 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/jagat.jpg' %}" alt="Jagat Pokherel">
+        </div>
+        <div class="person-body">
+            <p>
+                5. Jagat Pokherel, President, Micro Finance Federation of Nepal
+            </p>
+        </div>
+    </article>
+
+    <!-- Advisor 6 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/pemba.jpg' %}" alt="Pemba Tenziin Sherpa">
+        </div>
+        <div class="person-body">
+            <p>
+                6. Pemba Tenziin Sherpa, President, Sherpa Foundation
+            </p>
+        </div>
+    </article>
+
+    <!-- Advisor 7 -->
+    {% comment %} <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/bijaya_poudel.jpg' %}" alt="Bijaya Poudel">
+        </div>
+        <div class="person-body">
+            <p>
+                7. Bijaya Poudel, Former Chief, Kantipur TV
+            </p>
+        </div>
+    </article> {% endcomment %}
+</section>
+
+
+<!-- BOARD OF DIRECTORS -->
+<h2 class="section-title">Board Of Directors</h2>
+
+<section class="people-grid" aria-label="Board of Directors">
+    <!-- Director 1 -->
+<article class="person-card">
+    <div class="person-photo">
+        <img src="{% static 'app/images/president.jpg' %}" alt="Regina Pradhan">
+    </div>
+    <div class="person-body">
+        <p>
+            <strong>1. Regina Pradhan</strong><br>
+            President, NDRF<br><br>
+            <ul>
+            <strong>Other Associations:</strong><br>
+            - President: Safal Enterprises (P)Ltd<br>
+            - President: Saral Cargo & Courier (P)Ltd<br>
+            - Proprietor: Saral Money Transfer<br>
+            - BOD: Riviera International Academy<br>
+            - General Secretary: APF Women's Association
+            </ul>
+        </p>
+    </div>
+</article> 
+
+    <!-- Director 2 -->
+     <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/secreatry.jpg' %}" alt="Prakash Shrestha">
+        </div>
+        <div class="person-body">
+               <p>
+            <strong>2. Prakash Shrestha</strong><br>
+            General Secretary, NDRF<br><br>
+
+            <strong>Other Associations:</strong><br>
+            
+            - Director / Vice Principal / Chief Admin, Don Bosco School<br>
+            - Vice Principal / Chief Admin, Xavier Academy<br>
+            - Board Memberships (BOD): Riviera International Academy<br>
+            - Chairman, School Management Committee
+        </p>
+        </div>
+    </article> 
+
+
+
+
+    <!-- Director 3 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/treasurer.jpg' %}" alt="Ichchha Tulachan">
+        </div>
+        <div class="person-body">
+            <p>
+                <strong>3. Ichchha Tulachan</strong><br>
+                Treasurer, NDRF<br><br>
+                <strong>Other Associations:</strong><br>
+                - President, MIK Enterprises<br>
+                - Operation Officer, T3 Thakali Group
+            </p>
+        </div>
+    </article>
+
+    <!-- Director 4 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/sulav.jpg' %}" alt="Sulav Pradhan">
+        </div>
+        <div class="person-body">
+            <p>
+                <strong>4. Sulav Pradhan</strong><br>
+                Member, NDRF<br><br>
+                <strong>Other Associations:</strong><br>
+                - Civil Engineer, Consultant T3 Group
+            </p>
+        </div>
+    </article>
+
+    <!-- Director 5 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/member1.jpeg' %}" alt="Nikson Shrestha">
+        </div>
+        <div class="person-body">
+            <p>
+                <strong>5. Nikson Shrestha</strong><br>
+                Member, NDRF<br><br>
+                <strong>Other Associations:</strong><br>
+                - IT Consultant, Solution Nepal (P) Ltd<br>
+                - Co-founder, Gothalo Solutions
+            </p>
+        </div>
+    </article>
+</section>
+
+
 {% endblock %}
