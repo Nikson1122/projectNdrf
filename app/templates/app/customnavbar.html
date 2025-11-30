@@ -1,0 +1,40 @@
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app/css/customnavbar.css' %}">
+{% endblock %}
+
+
+<nav class="navbar">
+
+    
+    <div class="navbar-left">
+        <img src="{% static 'app/images/ndrflogo1.png' %}" alt="Logo" class="logo">
+    </div>
+
+   
+    <div class="navbar-right">
+        <ul class="nav-links" id="navMenu">
+
+            <li><a href="{% url 'events' %}">Add New Event</a></li>
+            <li><a href="">Completed Events</a></li>
+            <li><a href="">E-Com</a></li>
+            <li><a href="">Logout</a></li>
+
+        </ul>
+
+        <!-- Mobile Hamburger -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+    </div>
+</nav>
+
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+</script>
