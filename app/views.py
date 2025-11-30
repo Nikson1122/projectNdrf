@@ -143,5 +143,5 @@ def buy_product(request, product_id):
 @login_required
 
 def order_list(request):
-    orders = Order.objects.all().order_by('-created_at')
+    orders = Order.objects.all().order_by('id')
     return render(request, 'app/order_list.html', {'orders': orders})
