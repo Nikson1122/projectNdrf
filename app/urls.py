@@ -12,6 +12,12 @@ urlpatterns = [
     path('login/', views.login_user, name='login'),
     path('events/create/', views.create_event, name='events'),
     path('newevent/', views.event_list, name='upcomingevent'),
+    path('logout/', views.logout_user, name='logout'),
+    path('addproduct/', views.add_product, name='addproduct'),
+    path('ourstore/', views.our_store, name='ourstore'),
+    path('buy/<int:product_id>/', views.buy_product, name='buy_product'),
+    path('orders/', views.order_list, name='order_list'),
+
 ]
 
 if settings.DEBUG:

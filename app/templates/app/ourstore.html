@@ -1,0 +1,37 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Our Store{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app/css/ourstore.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1 class="store-title">Welcome To NDRF Store</h1>
+
+<div class="products-container">
+    {% for product in products %}
+    <div class="product-card">
+        <div class="card-image">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}">
+            {% else %}
+                <div class="no-image">No Image Available</div>
+            {% endif %}
+        </div>
+        <div class="card-content">
+            <h2 class="product-name">{{ product.name }}</h2>
+            <p class="product-description">{{ product.description|truncatechars:80 }}</p>
+            <p class="product-price">$ {{ product.price }}</p>
+            <p class="product-quantity">Stock: {{ product.quantity }}</p>
+         <a href="{% url 'buy_product' product.id %}" class="add-to-cart-btn">Buy Now</a>
+
+        </div>
+    </div>
+    {% empty %}
+    <p>No products available.</p>
+    {% endfor %}
+</div>
+
+{% endblock %}

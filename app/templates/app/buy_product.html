@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+
+{% block title %}Buy {{ product.name }}{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app/css/buyproduct.css' %}">
+
+
+{% endblock %}
+
+
+{% block content %}
+<h1>Buy {{ product.name }}</h1>
+
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Calculate Total</button>
+</form>
+
+{% if success %}
+    <h2>Total Price: ${{ total_price }}</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="hidden" name="save_order" value="1">
+        <button type="submit" class="save-btn">Confirm & Buy</button>
+    </form>
+{% endif %}
+
+{% endblock %}
+
