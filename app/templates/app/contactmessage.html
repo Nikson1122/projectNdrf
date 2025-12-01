@@ -8,7 +8,12 @@
 {% endblock %}
 
 {% block content %}
-{% comment %} <h2>All Messages</h2> {% endcomment %}
+
+{% block navbar %}
+    {% include 'app/customnavbar.html' %}
+{% endblock %}
+
+
 <table class="messages-table">
     <thead>
         <tr>
