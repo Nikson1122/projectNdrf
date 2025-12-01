@@ -1,10 +1,15 @@
 {% extends 'app/base.html' %}
+{% load static %}
 
 {% block title %}All Messages{% endblock %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app/css/messagec.css' %}">
+{% endblock %}
+
 {% block content %}
-<h2>All Messages</h2>
-<table border="1" cellpadding="10" cellspacing="0">
+{% comment %} <h2>All Messages</h2> {% endcomment %}
+<table class="messages-table">
     <thead>
         <tr>
             <th>Name</th>
