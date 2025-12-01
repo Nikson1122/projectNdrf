@@ -1,0 +1,35 @@
+{% extends 'app/base.html' %}
+
+{% load static %} 
+
+{% block title %}Home - NDRF{% endblock %}
+
+
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app/css/base.css' %}">
+{% endblock %}
+
+
+{% block content %}
+<section class="hero-section">
+    <div class="hero-text-top">
+        <h1>Welcome to Nepal Disaster Resilience Foundation (NDRF)</h1>
+        <p>Building a resilient Nepal through awareness, training, and support.</p>
+    </div>
+    <div class="hero-image">
+        <img src="{% static 'app/images/homendrf.jpg' %}" alt="NDRF Banner">
+    </div>
+</section>
+
+<section class="vision-mission">
+    <div class="box vision">
+        <h2>Our Vision</h2>
+        <p>“A disaster-resilient Nepal where communities are safe, prepared, and adaptive.”</p>
+    </div>
+    <div class="box mission">
+        <h2>Our Mission</h2>
+        <p>To enhance disaster resilience by strengthening preparedness, response, recovery, and risk reduction capacities of communities and institutions through training, innovation, research, partnerships, and evidence-based advocacy.</p>
+    </div>
+</section>
+{% endblock %}

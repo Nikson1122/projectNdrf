@@ -24,7 +24,7 @@
             <h2 class="product-name">{{ product.name }}</h2>
             <p class="product-description">{{ product.description|truncatechars:80 }}</p>
             <p class="product-price">$ {{ product.price }}</p>
-            <p class="product-quantity">Stock: {{ product.quantity }}</p>
+            {% comment %} <p class="product-quantity">Stock: {{ product.quantity }}</p> {% endcomment %}<br/>
          <a href="{% url 'buy_product' product.id %}" class="add-to-cart-btn">Buy Now</a>
 
         </div>

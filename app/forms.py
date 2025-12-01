@@ -1,7 +1,8 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from .models import CustomUser, Product
-
+from .models import CustomUser, Product, ContactMessage
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
         model = CustomUser
@@ -37,3 +38,11 @@ class BuyProductForm(forms.Form):
     customer_name = forms.CharField(label="Your Name", max_length=255)
     email = forms.EmailField(label="Email")
     phone_number = forms.CharField(label="Phone Number", max_length=20)
+
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model = ContactMessage
+        fields = ["name", "email", "subject", "message"]
+

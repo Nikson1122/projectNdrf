@@ -4,17 +4,17 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseForbidden
 from django.contrib import messages
-from .forms import ProductForm, BuyProductForm
+from .forms import ProductForm, BuyProductForm, ContactForm
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseBadRequest
 
-from .models import Event, Product, Order
+from .models import Event, Product, Order, ContactMessage
 
 
 # Create your views here.
 
 def home(request):
-    return render(request, 'app/base.html')
+    return render(request, 'app/home.html')
 
 def about(request):
     return render(request, 'app/about.html')
@@ -65,11 +65,6 @@ def logout_user(request):
     logout(request)
     return redirect('login')
 
-from django.shortcuts import render, redirect
-from django.contrib import messages
-from django.http import HttpResponseForbidden
-from .forms import ProductForm
-from django.contrib.auth.decorators import login_required
 
 @login_required
 def add_product(request):
@@ -145,3 +140,20 @@ def buy_product(request, product_id):
 def order_list(request):
     orders = Order.objects.all().order_by('id')
     return render(request, 'app/order_list.html', {'orders': orders})
+
+
+def contact_view(request):
+    print("DEBUG: contact_view called")
+    success = False
+    form = ContactForm(request.POST or None)  
+
+    if request.method == "POST" and form.is_valid():
+        form.save()
+        success = True
+        form = ContactForm()  # reset form
+
+    return render(request, "app/contact.html", {"form": form, "success": success})
+
+def contact_messages_view(request):
+    messages = ContactMessage.objects.all().order_by('-created_at')
+    return render(request, 'app/contactmessage.html', {'messages': messages})

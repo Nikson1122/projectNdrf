@@ -3,7 +3,7 @@ from django.contrib.auth.admin import UserAdmin
 from .models import CustomUser
 from .forms import CustomUserCreationForm, CustomUserChangeForm
 from django.contrib import admin
-from .models import Event, Product, Order
+from .models import Event, Product, Order, ContactMessage
 
 # Register your models here.
 
@@ -54,3 +54,10 @@ class OrderAdmin(admin.ModelAdmin):
     readonly_fields = ('total_price', 'created_at')
 
 
+
+
+@admin.register(ContactMessage)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ("name", "email", "subject", "created_at")
+    list_filter = ("created_at",)
+    search_fields = ("name", "email", "subject", "message")
