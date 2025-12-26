@@ -8,6 +8,8 @@
 
 
     <link rel="stylesheet" href="{% static 'app/css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'app/css/footer.css' %}">
+
 
   
     {% block extra_css %}
@@ -29,11 +31,11 @@
         {% endblock %}
     </div>
 
-
+    {% include 'app/footer.html' %}
     {% block extra_js %}
     {% endblock %}
 
-<footer style="
+{% comment %} <footer style="
     background-color: #ffffff; 
     color: #08386c; 
     text-align: center; 
@@ -44,7 +46,7 @@
 
 ">
     <p>© 2025 Nepal Disaster Resilience Foundation</p>
-</footer>
+</footer> {% endcomment %}
 
 
 
