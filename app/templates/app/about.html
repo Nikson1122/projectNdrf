@@ -108,6 +108,17 @@
             </p>
         </div>
     </article>
+    <!-- Advisor 7 -->
+    <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/bijay.jpg' %}" alt="Pemba Tenziin Sherpa">
+        </div>
+        <div class="person-body">
+            <p>
+                 Dr.Bijaya Lal Pradhan
+            </p>
+        </div>
+    </article>
 
     <!-- Advisor 7 -->
     {% comment %} <article class="person-card">
@@ -134,6 +145,17 @@ Major General, Nepal Army (Rtd.)
         </div>
     </article>
 
+     <article class="person-card">
+        <div class="person-photo">
+            <img src="{% static 'app/images/achut.jpg' %}" alt="Pemba Tenziin Sherpa">
+        </div>
+        <div class="person-body">
+            <p>
+Dr.Achyut Gyawali
+            </p>
+        </div>
+    </article>
+
 </section>
 
 
@@ -147,18 +169,21 @@ Major General, Nepal Army (Rtd.)
         <img src="{% static 'app/images/president.jpg' %}" alt="Regina Pradhan">
     </div>
     <div class="person-body">
-        <p>
+            <div class="person-name">
             <strong> Regina Pradhan</strong><br>
             President, NDRF<br><br>
-            <ul>
+            </div>
+
+                  <div class="person-details">
             <strong>Other Associations:</strong><br>
-            - President: Safal Enterprises (P)Ltd<br>
-            - President: Saral Cargo & Courier (P)Ltd<br>
-            - Proprietor: Saral Money Transfer<br>
-            - BOD: Riviera International Academy<br>
-            - General Secretary: APF Women's Association
+            <ul>
+           <li> - President: Safal Enterprises (P)Ltd</li>
+            <li> - President: Saral Cargo & Courier (P)Ltd</li>
+            <li> - Proprietor: Saral Money Transfer</li>
+            <li> - BOD: Riviera International Academy</li>
+            <li> - General Secretary: APF Women's Association</li>
             </ul>
-        </p>
+        </div>
     </div>
 </article> 
 
@@ -168,51 +193,62 @@ Major General, Nepal Army (Rtd.)
             <img src="{% static 'app/images/secreatry1.jpg' %}" alt="Prakash Shrestha">
         </div>
         <div class="person-body">
-               <p>
+              <div class="person-name">
+               
             <strong> Prakash Shrestha</strong><br>
-            General Secretary, NDRF<br><br>
-
+            General Secretary, NDRF
+            </div>
+  <div class="person-details">
             <strong>Other Associations:</strong><br>
-            
-            - Director / Vice Principal / Chief Admin, Don Bosco School<br>
-            - Vice Principal / Chief Admin, Xavier Academy<br>
-            - Board Memberships (BOD): Riviera International Academy<br>
-            - Chairman, School Management Committee
-        </p>
+            <ul>
+           <li> - Director / Vice Principal / Chief Admin, Don Bosco School</li>
+            <li> - Vice Principal / Chief Admin, Xavier Academy</li>
+            <li> - Board Memberships (BOD): Riviera International Academy</li>
+            <li> - Chairman, School Management Committee</li>
+            </ul>
+            </div>
         </div>
     </article> 
 
 
 
 
+  
+
     <!-- Director 3 -->
     <article class="person-card">
         <div class="person-photo">
-            <img src="{% static 'app/images/treasurer.jpg' %}" alt="Ichchha Tulachan">
+            <img src="{% static 'app/images/treasurer.jpg' %}" alt="Sulav Pradhan">
         </div>
         <div class="person-body">
-            <p>
-                <strong> Ichchha Tulachan</strong><br>
-                Treasurer, NDRF<br><br>
-                <strong>Other Associations:</strong><br>
-                - President, MIK Enterprises<br>
-                - Operation Officer, T3 Thakali Group
-            </p>
+            <div class="person-name">
+                <strong> Iccha Tulachan</strong><br>
+                Treasurer, NDRF
+                 <div class="person-details">
+                    <ul>
+                <strong>Other Associations:</strong>
+               <li>President, MIK Enterprises</li>
+                <li>Operation Officer, T3 Thakali Group</li>
+                </ul>
+            </ul>
+                </div>
         </div>
     </article>
-
     <!-- Director 4 -->
     <article class="person-card">
         <div class="person-photo">
             <img src="{% static 'app/images/sulav1.jpg' %}" alt="Sulav Pradhan">
         </div>
         <div class="person-body">
-            <p>
+            <div class="person-name">
                 <strong> Sulav Pradhan</strong><br>
-                Member, NDRF<br><br>
-                <strong>Other Associations:</strong><br>
-                - Civil Engineer, Consultant T3 Group
-            </p>
+                Member, NDRF
+                 <div class="person-details">
+                    <ul>
+                <strong>Other Associations:</strong>
+                <li> Civil Engineer, Consultant T3 Group</li>
+            </ul>
+                </div>
         </div>
     </article>
 
@@ -222,16 +258,31 @@ Major General, Nepal Army (Rtd.)
             <img src="{% static 'app/images/member1.jpeg' %}" alt="Nikson Shrestha">
         </div>
         <div class="person-body">
-            <p>
+            <div class="person-name">
                 <strong> Nikson Shrestha</strong><br>
-                Member, NDRF<br><br>
-                <strong>Other Associations:</strong><br>
-                - IT Consultant, Solution Nepal (P) Ltd<br>
-                - Co-founder, Gothalo Solutions
-            </p>
+                Member, NDRF
+            </div>
+                <div class="person-details">
+                    
+                <strong>Other Associations:</strong>
+                <ul></ul>
+                    <li>IT Consultant, Solution Nepal (P) Ltd</li>
+                    <li>Co-founder, Gothalo Solutions</li>
+                </ul>
+            </div>
         </div>
     </article>
 </section>
-
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(
+        ".people-grid[aria-label='Board of Directors'] .person-card"
+    ).forEach(card => {
+        card.addEventListener("click", () => {
+            card.classList.toggle("active");
+        });
+    });
+});
+</script>
 
 {% endblock %}

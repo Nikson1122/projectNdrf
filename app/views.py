@@ -157,3 +157,6 @@ def contact_view(request):
 def contact_messages_view(request):
     messages = ContactMessage.objects.all().order_by('-created_at')
     return render(request, 'app/contactmessage.html', {'messages': messages})
+
+def blog(request):
+    return render(request, 'app/blog.html')

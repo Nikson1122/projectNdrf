@@ -1,0 +1,47 @@
+{% extends 'app/base.html' %}
+{% load static %}
+
+{% block title %}Blogs | NDRF{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'app/css/blog.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="blog-hero">
+    <h1>Our Blogs</h1>
+    <p>Insights, stories, and updates on disaster resilience</p>
+</section>
+
+<section class="blog-container">
+    
+    <!-- Blog Card -->
+    <article class="blog-card">
+        <img src="{% static 'app/images/blog1.jpg' %}" alt="Blog image">
+        <div class="blog-content">
+            <span class="blog-date">Jan 12, 2025</span>
+            <h2>Disaster Preparedness in Nepal</h2>
+            <p>
+                Understanding preparedness strategies that help communities
+                respond effectively during disasters.
+            </p>
+            <a href="#" class="read-more">Read More →</a>
+        </div>
+    </article>
+
+    <!-- Blog Card -->
+    <article class="blog-card">
+        <img src="{% static 'app/images/blog2.jpg' %}" alt="Blog image">
+        <div class="blog-content">
+            <span class="blog-date">Dec 28, 2024</span>
+            <h2>Community Resilience Programs</h2>
+            <p>
+                How local initiatives are strengthening disaster response
+                capabilities across regions.
+            </p>
+            <a href="#" class="read-more">Read More →</a>
+        </div>
+    </article>
+
+</section>
+{% endblock %}
